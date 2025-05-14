@@ -10,8 +10,8 @@ A simple program to mix drinks with various liquids.
 ## To-Do
 
 - [x] Create Readme  
-- [ ] Extend pom.xml  
-  - [ ] Add credentials  
+- [x] Extend pom.xml  
+  - [x] Add credentials  
 - [ ] Squash existing bugs - Benjamin  
   - [ ] Find all three bugs in the code  
   - [ ] Improve comments  

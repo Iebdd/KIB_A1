@@ -64,6 +64,16 @@
         <version>5.12.1</version>
         <scope>test</scope>
       </dependency>
+      <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.11.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.9.0</version>
+      </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -127,22 +137,15 @@
   </build>
 <reporting>
 <plugins>
-  <!-- maven site for documentation -->
-  <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-project-info-reports-plugin</artifactId>
-    <version>3.9.0</version>
-  </plugin>
-
-  <!-- Java Doc within Maven Site Documentation-->
   <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-javadoc-plugin</artifactId>
     <version>3.11.2</version>
-    <configuration>
-      <!-- Disable JavaDoc warnings -->
-      <additionalJOption>-Xdoclint:none</additionalJOption>
-    </configuration>
+  </plugin>
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-project-info-reports-plugin</artifactId>
+    <version>3.9.0</version>
   </plugin>
 
   <!-- Test Coverage from JaCoCo Plugin integration in Maven Site Documentation -->
