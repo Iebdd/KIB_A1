@@ -5,21 +5,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>at.campus02.bsd</groupId>
-  <artifactId>bsd24_christian_hofer</artifactId>
+  <artifactId>KIB_A1</artifactId>
   <version>1.0-SNAPSHOT</version>
 
 
-  <url>https://github.com/my_repo_url/</url>
+  <url>https://github.com/iebdd/KIB_A1</url>
   <!-- developers information, will be used for documentation -->
   <developers>
     <developer>
-      <id>chrishofer</id>
-      <name>Christian Hofer</name>
-      <email>christian.hofer@lv.campus02.at</email>
+      <id>anhofer</id>
+      <name>Andreas Hofer</name>
+      <email>11705024@edu.campus02.at</email>
       <organization>FH CAMPUS 02</organization>
-      <organizationUrl>https://www.campus02.at/wirtschaftsinformatik/</organizationUrl>
       <roles>
-        <role>Avocational Lecturer</role>
+        <role>Student</role>
       </roles>
       <timezone>Europe/Vienna</timezone>
     </developer>
