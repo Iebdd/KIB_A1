@@ -22,6 +22,16 @@
       </roles>
       <timezone>Europe/Vienna</timezone>
     </developer>
+    <developer>
+      <id>bensheikh</id>
+      <name>Benjamin Sheikh</name>
+      <email>52404429@edu.campus02.at</email>
+      <organization>FH CAMPUS 02</organization>
+      <roles>
+        <role>Student</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+    </developer>
   </developers>
   <properties>
     <maven.compiler.source>21</maven.compiler.source>
