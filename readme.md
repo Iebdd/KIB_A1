@@ -9,7 +9,7 @@ A simple program to mix drinks with various liquids.
 
 ## To-Do
 
-- [ ] Create Readme  
+- [x] Create Readme  
 - [ ] Extend pom.xml  
   - [ ] Add credentials  
 - [ ] Squash existing bugs - Benjamin  
