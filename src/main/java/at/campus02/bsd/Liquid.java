@@ -1,6 +1,5 @@
 package at.campus02.bsd;
 
-// put into drinkss
 public class Liquid {
 
     private String name;
