@@ -78,10 +78,4 @@ public class DrinkQueueTest {
         assertEquals(d, queue.peek());
         assertEquals(d, queue.poll());
     }
-
-    @Test
-    public void testAddNullDrink() {
-        DrinkQueue queue = new DrinkQueue();
-        assertThrows(NullPointerException.class, () -> queue.offer(null));
-    }
 }

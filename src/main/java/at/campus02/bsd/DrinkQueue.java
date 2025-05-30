@@ -30,7 +30,11 @@ public class DrinkQueue implements DQueue {
     public Drink poll() {
         if (first == null) {return null;}           // If empty return null
         DrinkElement return_element = this.first;   // Get element to be returned in buffer
-        this.first = return_element.getNext();      // Get new first element
+        this.first = return_element.getNext();// Get new first element
+        if (this.first==null){
+            last = first;
+            return return_element.getDrink();
+        }
         this.first.setPrevious(null);      // and set it as the first
         return return_element.getDrink();           // Return drink from old first element
     }
