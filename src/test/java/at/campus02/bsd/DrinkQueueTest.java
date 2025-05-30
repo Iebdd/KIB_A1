@@ -78,4 +78,34 @@ public class DrinkQueueTest {
         assertEquals(d, queue.peek());
         assertEquals(d, queue.poll());
     }
+
+    @Test
+    public void testRemovesHead() {
+        DrinkQueue queue = new DrinkQueue();
+        Drink d1 = createDrink("Sprite");
+        Drink d2 = createDrink("Pepsi");
+
+        queue.offer(d1);
+        queue.offer(d2);
+
+        Drink removed = queue.remove(); // entfernt d1
+        assertEquals(d1, removed);
+        assertEquals(d2, queue.peek()); // d2 ist jetzt ganz vorne
+    }
+
+    @Test
+    public void testElementReturnsWithoutRemoval() {
+        DrinkQueue queue = new DrinkQueue();
+        Drink d1 = createDrink("Cola");
+        Drink d2 = createDrink("Fanta");
+
+        queue.offer(d1);
+        queue.offer(d2);
+
+        Drink first = queue.element(); //d1 expected
+        assertEquals(d1, first);
+        assertEquals(d1, queue.peek());
+    }
+
+
 }
