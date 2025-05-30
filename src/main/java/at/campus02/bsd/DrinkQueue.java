@@ -11,8 +11,15 @@ public class DrinkQueue implements DQueue {
 
     @Override
     public boolean offer(Drink obj) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'offer'");
+       if (first == null) {
+           first = new DrinkElement(obj);
+           last = first;
+       }else if (last == first) {
+           last = new DrinkElement(obj);
+       }else {
+           last.hasNext = new DrinkElement(obj);
+       }
+       return true;
     }
 
     @Override
