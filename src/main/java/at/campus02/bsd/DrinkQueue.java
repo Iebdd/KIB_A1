@@ -1,6 +1,7 @@
 package at.campus02.bsd;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class DrinkQueue implements DQueue {
 
@@ -16,26 +17,26 @@ public class DrinkQueue implements DQueue {
 
     @Override
     public Drink poll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'poll'");
+        if (first == null) {return null;}
+        return first;
     }
 
     @Override
     public Drink remove() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+        if (first == null) {throw new NoSuchElementException();}
+        return first;
     }
 
     @Override
     public Drink peek() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+        if (first == null) {return null;}
+        return first;
     }
 
     @Override
     public Drink element() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'element'");
+        if (first == null) {throw new NoSuchElementException();}
+        return first;
     }
     
 }
