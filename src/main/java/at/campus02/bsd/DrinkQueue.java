@@ -32,10 +32,12 @@ public class DrinkQueue implements DQueue {
     }
 
     @Override
-    public Drink remove() {
+    public Drink remove() throws NoSuchElementException {
         if (first == null) {throw new NoSuchElementException();}
-        //remove element
-        return first.getDrink;
+        DrinkElement return_element = this.first;
+        this.first = return_element.getNext();
+        this.first.setPrevious(null);
+        return return_element.getDrink();
     }
 
     @Override
@@ -44,9 +46,9 @@ public class DrinkQueue implements DQueue {
     }
 
     @Override
-    public Drink element() {
+    public Drink element() throws NoSuchElementException {
         if (first == null) {throw new NoSuchElementException();}
-        return first.getDrink;
+        return first.getDrink();
     }
     
 }
