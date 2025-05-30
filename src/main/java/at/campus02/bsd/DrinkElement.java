@@ -11,27 +11,10 @@ public class DrinkElement {
         this.next = null;
     }
 
-    public DrinkElement(Drink drink, DrinkElement previous, DrinkElement next) {
-        this.drink = drink;
-        this.previous = previous;
-        this.next = next;
-    }
-
-    public boolean hasNext() {
-        return (this.next != null);
-    }
-
-    public boolean hasPrevious() {
-        return (this.previous != null);
-    }
-
     public DrinkElement getNext() throws NullPointerException {
         return this.next;
     }
 
-    public DrinkElement getPrevious() throws NullPointerException {
-        return this.previous;
-    }
 
     public Drink getDrink() {
         return this.drink;

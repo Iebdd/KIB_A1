@@ -1,6 +1,7 @@
 package at.campus02.bsd;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class CocktailTest {
     Liquid tequila = new Liquid("tequila", 20, 40);
     Liquid curacao = new Liquid("curacao", 20, 40);
     Liquid lemon_juice = new Liquid("lemon juice", 30, 0);
+    Liquid lime_juice = new Liquid("lime juice", 30, 0);
     Liquid tonic_water = new Liquid("tonic water", 200, 0);
     Liquid cola = new Liquid("cola", 30, 0);
 
@@ -41,14 +43,31 @@ public class CocktailTest {
         assertEquals("Long Island Ice Tea", LIIT.getName());
     }
 
-    @DisplayName("Creating Long Island Ice Tea")
+    @DisplayName("Creating Gin Tonic")
     @Test
     void testGinTonic() {
-        this.content.addAll(Arrays.asList(this.gin, this.gin, this.tonic_water));
+        if("gin".equals(this.gin.getName())) {
+            
+        }
+        this.gin.setVolume(40);
+        
+        this.content.addAll(Arrays.asList(this.gin, this.tonic_water));
         Cocktail gin_tonic = new Cocktail("Gin Tonic", this.content);
         assertEquals(240, gin_tonic.getVolume(), DELTA);
         assertEquals(6.25, gin_tonic.getAlcoholPercent(), DELTA);
         assertTrue(gin_tonic.isAlcoholic());
         assertEquals("Gin Tonic", gin_tonic.getName());
+    }
+
+    @DisplayName("Creating Virgin Tonic")
+    @Test
+    void testVirginTonic() {
+        this.content.addAll(Arrays.asList(this.lime_juice, this.tonic_water));
+        Cocktail virgin_tonic = new Cocktail("Virgin Gin Tonic", this.content);
+        virgin_tonic.setName("Virgin Tonic");
+        assertEquals(230, virgin_tonic.getVolume(), DELTA);
+        assertEquals(0, virgin_tonic.getAlcoholPercent(), DELTA);
+        assertFalse(virgin_tonic.isAlcoholic());
+        assertEquals("Virgin Tonic", virgin_tonic.getName());
     }
 }
