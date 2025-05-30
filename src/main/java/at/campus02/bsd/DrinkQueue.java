@@ -25,25 +25,27 @@ public class DrinkQueue implements DQueue {
     @Override
     public Drink poll() {
         if (first == null) {return null;}
-        return first;
+        //remove element
+        return first.getDrink;
     }
 
     @Override
     public Drink remove() {
         if (first == null) {throw new NoSuchElementException();}
-        return first;
+        //remove element
+        return first.getDrink;
     }
 
     @Override
     public Drink peek() {
         if (first == null) {return null;}
-        return first;
+        return first.getDrink;
     }
 
     @Override
     public Drink element() {
         if (first == null) {throw new NoSuchElementException();}
-        return first;
+        return first.getDrink;
     }
     
 }
