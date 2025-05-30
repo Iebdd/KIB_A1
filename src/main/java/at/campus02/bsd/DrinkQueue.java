@@ -1,6 +1,12 @@
 package at.campus02.bsd;
 
+import java.util.List;
+
 public class DrinkQueue implements DQueue {
+
+    private DrinkElement first;
+    private DrinkElement last;
+
 
     @Override
     public boolean offer(Drink obj) {
