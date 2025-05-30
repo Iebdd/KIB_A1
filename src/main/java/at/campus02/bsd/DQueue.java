@@ -1,32 +1,31 @@
 package at.campus02.bsd;
 
-// fastly written (not really nice) comments you should adapt
+/**
+ * interface for String queue
+ * Method headers for simple queue operation
+ */
 public interface DQueue {
-  /** 
-   * I am a really bad comment
-   * 
-   * fasdfadsffdsadsf
-   * 
-   * fdsasdfadsf
-   * 
-   *  add object to queue, true if okay 
-   * 
-   * i fell asleep on my keyboard...
-   * 
-   * */ 
+
   public abstract boolean offer(Drink obj);
 
-  //returns + del 1st element; null if nothing in there
+  /**
+   * del 1st element
+   * @return 1st element; null if nothing in there
+   */
   public abstract Drink poll();
 
-  /* 
-  same as poll, if there is nothing in there error NoSuchElementException
+  /**
+   same as poll, if there is nothing in there error NoSuchElementException
    */
   public abstract Drink remove();
 
-  // 1st element without delete, otherwise null
+  /**
+   * @return 1st element without delete, otherwise null
+   */
   public abstract Drink peek();
 
-  // element is to peek what remove is to poll
+  /**
+   same as peek, if there is nothing in there error NoSuchElementException
+   */
   public abstract Drink element();
 }
