@@ -12,15 +12,15 @@ A simple program to mix drinks with various liquids.
 - [x] Create Readme  
 - [x] Extend pom.xml  
   - [x] Add credentials  
-- [x] Squash existing bugs - Benjamin  
+- [x] Squash existing bugs 
   - [x] Find all three bugs in the code  
   - [x] Improve comments  
-- [x] Create Cocktail class which implements Drink - Andreas  
+- [x] Create Cocktail class which implements Drink
 - [x] Create DrinkQueue which allows storage of Cocktails  
-- [ ] Create Java Doc - Benjamin  
-- [ ] Create Tests - Andreas  
-- [ ] Create Maven site  
-- [ ] Finish project 
+- [x] Create Java Doc
+- [x] Create Tests
+- [x] Create Maven site  
+- [x] Finish project 
 
 ## Concerning the Drink Queue implementation
 
