@@ -1,6 +1,5 @@
 package at.campus02.bsd;
 
-import java.util.List;
 import java.util.NoSuchElementException;
 
 public class DrinkQueue implements DQueue {
@@ -15,9 +14,14 @@ public class DrinkQueue implements DQueue {
            first = new DrinkElement(obj);
            last = first;
        }else if (last == first) {
-           last = new DrinkElement(obj);
+           this.last = new DrinkElement(obj);
+           first.setNext(this.last);
+           last.setPrevious(this.first);
        }else {
-           last.hasNext = new DrinkElement(obj);
+           DrinkElement old_last = this.last;
+           this.last = new DrinkElement(obj);
+           old_last.setNext(this.last);
+           this.last.setPrevious(old_last);
        }
        return true;
     }
