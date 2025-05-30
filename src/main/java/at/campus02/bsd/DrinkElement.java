@@ -1,5 +1,8 @@
 package at.campus02.bsd;
 
+/**
+ * saves the previous and next element of the given drink in the queue
+ */
 public class DrinkElement {
     private final Drink drink;
     private DrinkElement previous;

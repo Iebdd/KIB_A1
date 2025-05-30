@@ -2,6 +2,10 @@ package at.campus02.bsd;
 
 import java.util.NoSuchElementException;
 
+/**
+ * offers the basic methods to add and remove drinks
+ * implements Dqueue
+ */
 public class DrinkQueue implements DQueue {
 
     private DrinkElement first;
@@ -26,6 +30,10 @@ public class DrinkQueue implements DQueue {
        return true;
     }
 
+    /**
+     * del 1st element
+     * @return 1st element; null if nothing in there
+     */
     @Override
     public Drink poll() {
         if (first == null) {return null;}           // If empty return null
@@ -35,6 +43,9 @@ public class DrinkQueue implements DQueue {
         return return_element.getDrink();           // Return drink from old first element
     }
 
+    /**
+     same as poll, if there is nothing in there error NoSuchElementException
+     */
     @Override
     public Drink remove() throws NoSuchElementException {
         if (first == null) {throw new NoSuchElementException();}
@@ -43,12 +54,17 @@ public class DrinkQueue implements DQueue {
         this.first.setPrevious(null);
         return return_element.getDrink();
     }
-
+    /**
+     * @return 1st element without delete, otherwise null
+     */
     @Override
     public Drink peek() {
         return this.first.getDrink();
     }
 
+    /**
+     same as peek, if there is nothing in there error NoSuchElementException
+     */
     @Override
     public Drink element() throws NoSuchElementException {
         if (first == null) {throw new NoSuchElementException();}
