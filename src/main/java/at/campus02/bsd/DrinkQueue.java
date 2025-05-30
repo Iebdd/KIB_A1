@@ -1,6 +1,6 @@
 package at.campus02.bsd;
 
-public class DrinkQueue implements BQueue {
+public class DrinkQueue implements DQueue {
 
     @Override
     public boolean offer(Drink obj) {

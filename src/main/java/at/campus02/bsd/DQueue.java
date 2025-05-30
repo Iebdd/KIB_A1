@@ -1,7 +1,7 @@
 package at.campus02.bsd;
 
 // fastly written (not really nice) comments you should adapt
-public interface BQueue {
+public interface DQueue {
   /** 
    * I am a really bad comment
    * 
