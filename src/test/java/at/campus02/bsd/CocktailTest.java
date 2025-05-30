@@ -19,7 +19,7 @@ public class CocktailTest {
     Liquid tequila = new Liquid("tequila", 20, 40);
     Liquid curacao = new Liquid("curacao", 20, 40);
     Liquid lemon_juice = new Liquid("lemon juice", 30, 0);
-    Liquid lime_juice = new Liquid("lime juice", 30, 0);
+    Liquid lime_juice = new Liquid("lime juice", 30, 5);
     Liquid tonic_water = new Liquid("tonic water", 200, 0);
     Liquid cola = new Liquid("cola", 30, 0);
 
@@ -46,11 +46,10 @@ public class CocktailTest {
     @DisplayName("Creating Gin Tonic")
     @Test
     void testGinTonic() {
-        if("gin".equals(this.gin.getName())) {
-            
+        if(this.gin.getName().equals("gin")) {
+            this.gin.setVolume(40);
+            this.gin.setName("double_gin"); 
         }
-        this.gin.setVolume(40);
-        
         this.content.addAll(Arrays.asList(this.gin, this.tonic_water));
         Cocktail gin_tonic = new Cocktail("Gin Tonic", this.content);
         assertEquals(240, gin_tonic.getVolume(), DELTA);
@@ -62,6 +61,7 @@ public class CocktailTest {
     @DisplayName("Creating Virgin Tonic")
     @Test
     void testVirginTonic() {
+        this.lime_juice.setAlcoholPercent(0);
         this.content.addAll(Arrays.asList(this.lime_juice, this.tonic_water));
         Cocktail virgin_tonic = new Cocktail("Virgin Gin Tonic", this.content);
         virgin_tonic.setName("Virgin Tonic");
