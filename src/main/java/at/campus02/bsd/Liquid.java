@@ -1,6 +1,9 @@
 package at.campus02.bsd;
 
-// put into drinkss
+/**
+ * This class describes a liquid
+ * includes volume and alcohol precentage
+ */
 public class Liquid {
 
     private String name;
@@ -11,6 +14,12 @@ public class Liquid {
     // alcohohl percent (eg 42 )
     private double alcoholPercent;
 
+    /**
+     * Liquid constructure adds all needed params to the object
+     * @param name the name of the liquid
+     * @param volume how much of that liquid is given
+     * @param alcoholPercent alcohol precentage in the liquid
+     */
     public Liquid(String name, double volume, double alcoholPercent) {
         this.name = name;
         this.volume = volume;
