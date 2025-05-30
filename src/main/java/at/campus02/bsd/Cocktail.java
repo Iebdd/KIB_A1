@@ -51,10 +51,10 @@ public class Cocktail extends Drink{
     public boolean isAlcoholic() {
         for(Liquid liquid : content) {
             if(liquid.getAlcoholPercent() != 0) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
 }
