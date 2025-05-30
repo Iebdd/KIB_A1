@@ -12,15 +12,19 @@ A simple program to mix drinks with various liquids.
 - [x] Create Readme  
 - [x] Extend pom.xml  
   - [x] Add credentials  
-- [ ] Squash existing bugs - Benjamin  
-  - [ ] Find all three bugs in the code  
-  - [ ] Improve comments  
-- [ ] Create Cocktail class which implements Drink - Andreas  
-- [ ] Create DrinkQueue which allows storage of Cocktails  
+- [x] Squash existing bugs - Benjamin  
+  - [x] Find all three bugs in the code  
+  - [x] Improve comments  
+- [x] Create Cocktail class which implements Drink - Andreas  
+- [x] Create DrinkQueue which allows storage of Cocktails  
 - [ ] Create Java Doc - Benjamin  
 - [ ] Create Tests - Andreas  
 - [ ] Create Maven site  
-- [ ] Finish project  
+- [ ] Finish project 
+
+## Concerning the Drink Queue implementation
+
+We implemented the Drink Queue with an extra Element class, but then pushed it straight to the queue branch instead of creating new ones since one depended on the other so the branches per person do not exist. We hope that is not too much of a problem
 
 ## Requirements
 
